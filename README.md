@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bunty's Taxis — Isle of Man
+
+Official website for **Bunty's Taxis**, a premium taxi service covering the whole of the Isle of Man.
+
+🌐 [buntystaxis.com](https://buntystaxis.com) &nbsp;|&nbsp; 📞 +44 7624 313151 &nbsp;|&nbsp; ✉️ info@buntystaxis.com
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Icons:** Lucide React
+- **Font:** Europa Grotesk SH (self-hosted)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── globals.css       # Global styles, brand colours, animations
+│   ├── layout.tsx        # Root layout + SEO metadata
+│   └── page.tsx          # Page assembly
+└── components/
+    ├── Header.tsx         # Sticky nav with logo + CTA
+    ├── Hero.tsx           # Full-screen hero with animated taxis
+    ├── BookingCTA.tsx     # Blue booking call-to-action section
+    ├── Services.tsx       # 6-card services grid
+    ├── Fleet.tsx          # Fleet overview with car visual
+    ├── About.tsx          # Company story and values
+    ├── Coverage.tsx       # Island-wide coverage + area tags
+    ├── Contact.tsx        # Phone, WhatsApp, email cards
+    ├── Footer.tsx         # Footer with links and contact
+    └── MobileBar.tsx      # Fixed bottom Call/WhatsApp bar (mobile)
 
-To learn more about Next.js, take a look at the following resources:
+public/
+├── car.png               # Taxi icon (used in hero + fleet)
+├── 3000w/logo.png        # Brand logo
+└── font/                 # Europa Grotesk SH (self-hosted)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Brand
 
-## Deploy on Vercel
+| Token | Value |
+|---|---|
+| Black | `#000000` |
+| White | `#FFFFFF` |
+| Blue | `#29ABE2` |
+| Font | Europa Grotesk SH |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build & Deploy
+
+```bash
+npm run build    # Production build
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+Ready to deploy to **Vercel**, **Netlify**, or any Node.js host.
+
+---
+
+## Contact
+
+**Bunty's Taxis** — Isle of Man  
+📞 [+44 7624 313151](tel:+447624313151)  
+💬 [WhatsApp](https://wa.me/447624313151)  
+✉️ [info@buntystaxis.com](mailto:info@buntystaxis.com)
