@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { Phone, MessageCircle, ChevronDown } from "lucide-react";
+import { MessageCircle, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -97,13 +97,6 @@ export default function Hero() {
             >
               <MessageCircle size={18} className="text-[#29ABE2]" />
               WhatsApp
-            </a>
-            <a
-              href="tel:+447624313151"
-              className="group inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40 text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 sm:hidden"
-            >
-              <Phone size={18} className="text-white/70" />
-              Call Now
             </a>
           </div>
 
