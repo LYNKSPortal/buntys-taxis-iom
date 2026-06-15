@@ -76,48 +76,92 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden flex items-center gap-2 text-white py-2 px-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? (
+              <>
+                <X size={22} />
+                <span className="text-xs font-bold tracking-widest uppercase">Close</span>
+              </>
+            ) : (
+              <>
+                <Menu size={22} />
+                <span className="text-xs font-bold tracking-widest uppercase">Menu</span>
+              </>
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-black border-t border-white/10">
-          <div className="px-4 py-6 flex flex-col gap-4">
-            {navLinks.map((link) => (
+      {/* Full-screen Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 bg-black flex flex-col transition-all duration-300 ease-in-out ${
+          menuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+        aria-hidden={!menuOpen}
+      >
+          {/* Top bar inside overlay */}
+          <div className="flex items-center justify-between px-4 h-16 border-b border-white/10 shrink-0">
+            <a href="#" onClick={() => setMenuOpen(false)}>
+              <Image
+                src="/3000w/logo.png"
+                alt="Bunty's Taxis"
+                width={140}
+                height={34}
+                className="h-9 w-auto object-contain"
+              />
+            </a>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-2 text-white py-2 px-1"
+              aria-label="Close menu"
+            >
+              <X size={22} />
+              <span className="text-xs font-bold tracking-widest uppercase">Close</span>
+            </button>
+          </div>
+
+          {/* Nav Links — large, centred */}
+          <nav className="flex-1 flex flex-col items-center justify-center gap-2 px-8">
+            {navLinks.map((link, i) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-base font-semibold tracking-widest uppercase text-white/80 hover:text-[#29ABE2] transition-colors duration-200 py-1"
+                className="w-full text-center text-3xl font-black uppercase tracking-wide text-white/80 hover:text-[#29ABE2] transition-all duration-300 py-4 border-b border-white/[0.06] last:border-0"
+                style={{
+                  transitionDelay: menuOpen ? `${80 + i * 60}ms` : "0ms",
+                  opacity: menuOpen ? 1 : 0,
+                  transform: menuOpen ? "translateY(0)" : "translateY(12px)",
+                }}
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 flex flex-col gap-3 border-t border-white/10">
-              <a
-                href="tel:+447624313151"
-                className="flex items-center gap-2 text-sm font-bold text-white/80"
-              >
-                <Phone size={15} />
-                +44 7624 313151
-              </a>
-              <a
-                href="#booking"
-                onClick={() => setMenuOpen(false)}
-                className="bg-[#29ABE2] text-white text-sm font-bold tracking-widest uppercase px-5 py-3 rounded-sm text-center hover:bg-[#1a8bbf] transition-colors duration-200"
-              >
-                Book Now
-              </a>
-            </div>
+          </nav>
+
+          {/* Bottom CTAs */}
+          <div className="px-6 pb-10 pt-6 flex flex-col gap-3 border-t border-white/10 shrink-0">
+            <a
+              href="tel:+447624313151"
+              className="flex items-center justify-center gap-2 text-sm font-bold text-white/60 hover:text-white transition-colors duration-200"
+            >
+              <Phone size={15} className="text-[#29ABE2]" />
+              +44 7624 313151
+            </a>
+            <a
+              href="#booking"
+              onClick={() => setMenuOpen(false)}
+              className="bg-[#29ABE2] text-white text-sm font-bold tracking-widest uppercase px-5 py-4 rounded-sm text-center hover:bg-[#1a8bbf] transition-colors duration-200"
+            >
+              Book a Taxi
+            </a>
           </div>
         </div>
-      )}
     </header>
   );
 }
