@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://buntystaxis.com"),
+  metadataBase: new URL("https://buntys-taxis-iom.vercel.app"),
   title: {
     default: "Bunty's Taxis | Premier Taxi Service on the Isle of Man",
     template: "%s | Bunty's Taxis",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://buntystaxis.com",
+    canonical: "https://buntys-taxis-iom.vercel.app",
   },
   icons: {
     icon: [
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Bunty's Taxis | Premier Taxi Service – Isle of Man",
     description:
       "Premier taxis covering the whole Isle of Man. Cars & multi-seater vehicles. Book in advance or call/WhatsApp for short-notice journeys.",
-    url: "https://buntystaxis.com",
+    url: "https://buntys-taxis-iom.vercel.app",
     siteName: "Bunty's Taxis",
     locale: "en_GB",
     type: "website",
@@ -99,9 +99,9 @@ const jsonLd = {
   alternateName: "Buntys Taxis",
   description:
     "Premier taxi and multi-seater transport service covering the whole Isle of Man. Airport transfers, ferry port pickups, local journeys, business and group travel.",
-  url: "https://buntystaxis.com",
-  logo: "https://buntystaxis.com/3000w/logo.png",
-  image: "https://buntystaxis.com/meta-twitter-card.jpg",
+  url: "https://buntys-taxis-iom.vercel.app",
+  logo: "https://buntys-taxis-iom.vercel.app/3000w/logo.png",
+  image: "https://buntys-taxis-iom.vercel.app/meta-twitter-card.jpg",
   telephone: "+447624313151",
   email: "info@buntystaxis.com",
   address: {
