@@ -81,7 +81,7 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animate-delay-300">
+          <div className="hidden sm:flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animate-delay-300">
             <a
               href="#booking"
               className="group inline-flex items-center justify-center gap-3 bg-[#29ABE2] hover:bg-[#1a8bbf] text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 hover:scale-105"
@@ -101,7 +101,7 @@ export default function Hero() {
           </div>
 
           {/* Phone Number */}
-          <div className="mt-10 flex items-center justify-center gap-3 animate-fade-in-up animate-delay-400">
+          <div className="hidden sm:flex mt-10 items-center justify-center gap-3 animate-fade-in-up animate-delay-400">
             <div className="w-8 h-px bg-[#29ABE2]" />
             <a
               href="tel:+447624313151"
