@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/meta-twitter-card.jpg",
         width: 1200,
         height: 630,
         alt: "Bunty's Taxis — Premier Taxi Service on the Isle of Man",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     title: "Bunty's Taxis | Premier Taxi Service – Isle of Man",
     description:
       "Premier taxi service covering the entire Isle of Man. Airport transfers, ferry pickups, local & group travel.",
-    images: ["/og-image.png"],
+    images: ["/meta-twitter-card.jpg"],
   },
 };
 
@@ -101,7 +101,7 @@ const jsonLd = {
     "Premier taxi and multi-seater transport service covering the whole Isle of Man. Airport transfers, ferry port pickups, local journeys, business and group travel.",
   url: "https://buntystaxis.com",
   logo: "https://buntystaxis.com/3000w/logo.png",
-  image: "https://buntystaxis.com/og-image.png",
+  image: "https://buntystaxis.com/meta-twitter-card.jpg",
   telephone: "+447624313151",
   email: "info@buntystaxis.com",
   address: {
