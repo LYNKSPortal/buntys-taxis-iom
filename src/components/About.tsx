@@ -1,4 +1,3 @@
-"use client";
 
 import { Heart, Award, ThumbsUp } from "lucide-react";
 

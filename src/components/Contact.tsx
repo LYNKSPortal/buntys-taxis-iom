@@ -1,4 +1,3 @@
-"use client";
 
 import { Phone, MessageCircle, Mail, Clock } from "lucide-react";
 

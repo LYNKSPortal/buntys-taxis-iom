@@ -1,4 +1,3 @@
-"use client";
 
 import { Plane, Ship, MapPin, Globe, Users, Briefcase } from "lucide-react";
 

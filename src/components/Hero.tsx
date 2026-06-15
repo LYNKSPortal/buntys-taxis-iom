@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 import { Phone, MessageCircle, ChevronDown } from "lucide-react";
@@ -33,6 +32,7 @@ export default function Hero() {
               position: "absolute",
               top: car.top,
               left: 0,
+              willChange: "transform",
               animation: `${car.ltr ? "carLTR" : "carRTL"} ${car.duration}s linear ${car.delay}s infinite`,
             }}
           >
